@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd"> 
+
+<configuration>
+	
+	<!-- 配置别名 -->
+	<typeAliases> 
+		<!-- <typeAlias alias="admin" type="com.oracle.ebp.domain.AdminUser"/>  -->
+	</typeAliases>
+	
+	<!-- 引入其它配置文件 -->
+	<mappers>
+		<!-- resource:跟的是mapper配置文件的路径 -->
+	<!-- 	<mapper resource="com/oracle/ebp/dao/AdminUserMapper.xml"/> -->
+	</mappers> 
+
+</configuration>
+

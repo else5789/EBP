@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3.dtd">
+
+<mapper namespace="com.oracle.ebp_16.dao.AdminMapper">
+	
+	<select id="selectByName" parameterType="String" resultType="admin">
+		select * from adminUser where userName=#{username}
+	</select>
+	
+		
+<!-- ======================管理员用户管理方法============================================================ -->
+	<!-- public User getUserByUid(String uid); -->
+	<select id="getUserByUid" resultType="user" parameterType="String">
+		select * from user where uid=#{uid}
+	</select>
+	
+	<!-- public List<User> getUserByTime(String begin,String end); -->
+	<select id="getUserByTime" parameterType="String" resultType="user">
+		select * from user where regTime &gt;= #{0} and regTime &lt;= #{1}
+	</select>
+	
+	<!-- public User getUserByKeys(User user); -->
+	<select id="getUserByKeys" parameterType="user" resultType="user">
+		select * from user 
+		<where>
+			<if test="username!=null">
+				<!-- 输入的可能是username也可能是name -->
+				and username like concat("%",#{username},"%")  or name like concat("%",#{username},"%")
+			</if>
+			<if test="idCard!=null">
+				and idCard like concat("%",#{idCard},"%") 
+			</if>
+			<if test="telno!=null">
+				and telno like concat("%",#{telno},"%") 
+			</if>
+		</where>
+	</select>
+
+	<!-- public int changeStatus(String uid,String status); -->
+	<update id="changeStatus">
+		update user set status=#{1} where uid=#{0}
+	</update>
+	
+	
+	<!-- public List<User> getAllUsers(); -->
+	<select id="getAllUsers" resultType="user">
+		select * from user
+	</select>
+	
+	
+</mapper>

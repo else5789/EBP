@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3.dtd">
+
+<mapper namespace="com.oracle.ebp_16.dao.ProductMapper">
+	<!-- 管理员查询商品-->
+	<select id="selectAll" resultType="Product">
+		select * from product
+	</select>	
+	 
+	
+	<select id="addProduct" parameterType="Product" >
+		insert into product(descs,amount,balance,price,status) values(#{descs},#{amount},#{balance},#{price},#{status})
+	</select>	
+	
+
+	<select id="selectById" parameterType="String" resultType="Product">
+		select * from product where pid=#{0}
+	</select>	
+	
+	<update id="changestatus" >
+		update product set status=#{1} where pid=#{0}
+	</update>	
+	 
+	 <select id="selectByDescs" resultType="Product">
+		select * from product where descs like concat("%",#{0},"%")
+	</select>
+	
+	<update id="adminUpdateProduct" >
+		update product set descs=#{1},amount=#{2},balance=#{3},price=#{4} where pid=#{0}
+	</update>
+	
+	<select id="getProduct" resultType="Product">
+		select * from product limit #{start},#{length};
+	</select>
+	
+	<select id="getCount" resultType="int">
+		select count(*) from product
+	</select>
+	
+	<select id="getByDescs" resultType="Product">
+		select * from product where descs like concat("%",#{2},"%") limit #{start},#{length}
+	</select>	
+	
+	
+	
+<!-- ==========用户 ============================================= -->
+	<!-- 用户查询商品-->
+	<select id="querySrcById">
+		select src
+		from product
+		where pid=#{0} and status=1;
+	</select>
+	
+	
+	<select id="listALLProducts" resultType="product">
+		select *
+		from
+		product
+		where status=1;
+	</select>
+
+	<select id="queryProducts" resultType="product">
+		select *
+		from product
+		where status = 1
+			<if test="#{0} != null">
+				and descs like concat("%",#{0},"%")
+			</if>
+			<if test="#{1} != null">
+				<![CDATA[and price > #{1}]]>
+			</if>
+			<if test="#{2} != null">
+				<![CDATA[and price < #{2}]]>
+			</if>
+	</select>
+
+	<select id="queryPriceById">
+		select price
+		from product
+		where status = 1 and pid = #{0}
+	</select>
+	
+	<update id="updateProduct" >
+		update product
+		set balance = balance-#{1}
+		where pid=#{0}
+	</update>
+	
+	<select id="queryBanlanceById" resultType="string" >
+		select balance
+		from product
+		where pid=#{0}
+	</select>
+</mapper>

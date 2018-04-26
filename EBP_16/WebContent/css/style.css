@@ -1,0 +1,679 @@
+@charset "utf-8";
+
+/* 我的CSS */
+	#myDiv{
+		margin-left: auto;
+		margin-right: auto;
+		width: 500px;
+		height: 500px;
+		margin-top: 50px;
+	}
+
+/*=========================================================*/
+
+
+body{
+    margin:0 auto; font-family:"����"; text-align:center; font-size:14px;
+}
+img{
+    border:0; vertical-align:top;
+}
+div,p,input,form,h1,h2,h3,h4,h5,dl,dt,dd,ul,li,span{
+    margin:0; padding:0;
+}
+a{
+    text-decoration:none; color:#666666; font-size:14px;
+}
+ul,li{
+    list-style:none;
+}
+
+/**********************************login styles**********************************/
+#login{
+    width:602px; height:353px; background:url(../images/bg-login.png) no-repeat;
+    text-align:left; margin:0 auto; margin-top:120px;
+}
+#login .main_body{
+    width:602px; height:253px; padding-top:90px;
+}
+#login .main_body .left{
+    float:left; width:230px; height:137px;padding-left:15px;
+}
+#login .main_body .right{
+    float:left; width:230px; height:auto; margin-left:35px;
+    padding-left:15px;line-height:35px; font-weight:bold;
+}
+/* #login .main_body .right input{
+    background:#FFFFFF; border:solid 1px #8AB0BB; height:20px; 
+    padding-left:5px; line-height:20px;
+} */
+#login .main_body .right p input{
+    background:url(../images/bg-button.jpg) no-repeat; color:#FFFFFF;
+    border:none; width:70px; height:23px; margin-top:20px;
+}
+
+/**********************************main page styles**********************************/
+#main_page{
+    margin:0 auto; width:1000px;
+}
+#main_page #header{
+    margin:0 auto; width:100%; height:71px; float:left;
+    background-color:#7DCFFF;
+    background:url(../images/bg-banner.jpg) no-repeat;
+}
+#main_page #header img{
+    margin:13px 0 0 10px; float:left;
+}
+
+#main_page #body{
+    width:100%
+}
+#navigation{
+    width:220px; min-height:400px; 
+    background:url(../images/bg-nav.jpg) repeat-x; float:left;
+}
+#navigation #inner{
+    width:200px; height:85%; padding-top:5px; background-color:#EDF7FF; 
+    border:solid 1px #CBD4DB; margin:0 auto;text-align:center;
+}
+#navigation #inner p{
+    height:28px; background:url(../images/bg-nav-p.jpg) repeat-x;
+    color:#FFFFFF;font-weight:bold; line-height:28px;
+    padding-top: 3px;
+}
+#navigation #inner ul li{
+    line-height:28px; background:url(../images/bg-nav-li.jpg) repeat-x;
+}
+#navigation #inner ul li a{
+    font-weight:bold; color:#283032; display:block;
+    width:140px; text-align:left; 
+    padding:2px 0 0 42px; margin-top:14px;
+    letter-spacing: 8px;
+}
+#navigation #inner .index{
+    margin-left: 20px; background:url(../images/icon-index.jpg) no-repeat 15px;
+}
+#navigation #inner .personal{
+    margin-left: 20px; background:url(../images/icon-personal.jpg) no-repeat 15px;
+}
+#navigation #inner .exam{
+    margin-left: 20px; background:url(../images/icon-exam.jpg) no-repeat 15px;
+}
+#navigation #inner .examlog{
+    margin-left: 20px; background:url(../images/icon-examlog.jpg) no-repeat 15px;
+}
+#navigation #inner .logout{
+    margin-left: 20px; background:url(../images/icon-logout.jpg) no-repeat 15px;
+}
+#navigation #inner ul li a:hover{
+    color:#1677D8;
+}
+
+#content{
+    width:780px; height:auto; margin:0 auto; float:left;
+}
+#content .title{
+    width:100%; height:28px; 
+    background:url(../images/bg-title.jpg) repeat-x;
+}
+#content .title p{
+    text-align:left; padding-top:1px; padding-left:20px; line-height:28px; 
+    color:#08448A; font-weight:bold; margin:0;
+}
+#content .title p img{
+    padding-top:1px; vertical-align:top;
+}
+#content .main{
+    margin-top:20px; text-align:left; 
+}
+#content .main h2{
+    padding-left:152px;
+    font-size:14px; font-weight:bold; color:#08448A; 
+    margin-top:10px; margin-bottom:10px;
+    letter-spacing: 4px;
+}
+#content .main table{
+    font-size:14px; 
+    text-align:left; background:#FFFFFF; 
+}
+#content .main tr{
+    margin-top:20px; height:35px;
+}
+/* #content .main input{
+    width:165px; padding-left:5px; border:solid 1px #C4D0CC;
+}  */
+#content .main .button{
+    background:none; border:0; width:54px; height:20px; 
+    background-color:#B6DDFC; margin-right:15px;
+}
+#content .main .item{
+    width:100%; height:137px; border-bottom:solid 1px #B1DE83;
+}
+#content .main .item p{
+    text-align:left; padding-left:20px; line-height:25px;
+}
+#content .main .item .answer{
+    padding-left:40px; line-height:26px;
+}
+#content .mainlist table{
+    background:#BAC2CF; margin:10px 0 0 8px;
+}
+#content .mainlist tr{
+    background:#FFFFFF; border:0; text-align:center;
+    line-height:25px;
+}
+#content .mainlist th{
+    color:#2B67D7; font-size:14px; text-align:center; font-weight:bold;
+}
+#content .mainlist td{
+    color:#666666; font-size:14px;
+}
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+body {
+  background-color: #494A5F;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+h2 {
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  z-index: -1;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.menu {
+  width: 40px;
+  height: 40px;
+}
+
+.title {
+  width: 300px;
+  height: 10px;
+  top: 60px;
+}
+
+.item {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+}
+
+i {
+  font-size: 24px;
+  color: #222222;
+}
+*{margin:0;padding:0;box-sizing:border-box;list-style:none}
+body{font-family:"Microsoft Yahei";min-width:1000px}
+a{outline:0;text-decoration:none}
+strong{font-weight:400}
+.strong{font-weight:700}
+::selection{background:#1EACDF;color:#fff}
+img{border:0}
+::-moz-selection{background:#1EACDF;color:#fff}
+::-webkit-selection{background:#1EACDF;color:#fff}
+.autoWidth{margin:0 auto;min-width:1000px;max-width:1200px}
+.auto{margin:0 auto;min-width:1000px;max-width:1200px}
+@media screen and (max-width:1233px){.auto{padding-left:10px}
+}
+.clearfix:after,.clearfix:before{display:table;line-height:0;content:""}
+.clearfix:after{clear:both}
+.clear-float{clear:both}
+
+
+
+.footer{background-color:#009fd9;font-family:"Microsoft Yahei"}
+.footer-floor1{width:100%;padding:36px 0 60px}
+.footer-list{width:69%;height:100%;float:left}
+.footer-list ul{float:left;margin-right:13%}
+.footer-list .flist-4{margin-right:0}
+.footer-list li{line-height:32px}
+.footer-list li a{color:#b6e2f2;font-size:12px;text-decoration:none}
+.footer-list li a:hover{text-decoration:underline;color:#fff}
+.footer-list .flist-title{font-size:16px;color:#fff;margin-bottom:15px}
+.footer-floor2{width:100%;border-top:1px solid #4cc3ed;padding:20px 0;text-align:center}
+.footer-floor2 p{text-align:center;color:#b6e2f2;font-size:12px;line-height:30px}
+.footer-floor2 p span{font-family:PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif}
+.footer-floor2 a{color:#b6e2f2}
+.footer-floor2 a:hover{color:#a8d0e0;text-decoration:underline}
+.foot-link{margin:0 15px;text-decoration:none;color:#b6e2f2}
+.foot-link:hover{text-decoration:underline}
+.footer-right{width:300px;float:right}
+.telephone{width:100%;height:32px;line-height:32px;color:#fff}
+.telephone span{display:inline-block;width:32px;height:32px;float:left;background:url(../images/phone_32px.png);margin-left:16%}
+.telephone .tel-number{font-size:30px;font-weight:400;text-align:right}
+.official-plat{width:100%;height:100%;margin-top:20px;position:relative}
+.official-plat ul{float:right;margin-top:7px}
+.official-plat ul li span{display:inline-block;width:32px;height:32px;background:url(../images/plat_icon.png) no-repeat 0 0;line-height:32px;float:left;margin-right:12px}
+.official-plat ul li .weibo-logo{background:url(../images/plat_icon.png) no-repeat -32px 0}
+.official-plat ul li .qq-logo{background:url(../images/plat_icon.png) no-repeat -64px 0}
+.official-plat ul li{height:45px}
+.official-plat ul a{display:inline-block;height:32px;width:100%;line-height:32px;color:#fff;text-decoration:none;font-size:12px}
+.official-plat>p{display:inline-block;width:132px;height:132px;border:1px solid #ddd;background-color:#fff}
+.official-plat .weixin{position:absolute;top:0;left:10px;background-image:url(../images/plat_qrcode.png);background-repeat:no-repeat;background-position:0 0}
+.official-plat .weibo{position:absolute;top:0;left:10px;background-image:url(../images/plat_qrcode.png);background-repeat:no-repeat;background-position:-132px 0;display:none}
+#wx-corner{border:10px solid transparent;border-left:10px solid #fff;position:absolute;top:12px;right:-20px;z-index:10}
+#wb-corner{border:10px solid transparent;border-left:10px solid #fff;position:absolute;top:58px;right:-20px;z-index:10}
+.five-superiority{width:100%;border-bottom:1px solid #27aede;padding:10px 0 20px}
+.five-superiority-list li{float:left;width:20%;height:36px;text-align:center;border-left:1px solid #27aede}
+.five-superiority-list li:first-child{border-left:none}
+.five-superiority-list li a{display:inline-block;position:relative;width:100%;height:36px;line-height:36px;background:no-repeat 2% center;text-indent:2em;color:#fff;font-size:16px}
+.five-superiority-list li a:hover{color:#bfe7f5}
+.five-superiority-list li a.superiority-text{text-indent:4em}
+.superiority-icon{position:absolute;width:40px;height:40px;left:10%;background-repeat:no-repeat;background-image:url(../images/footer_youshi.png)}
+.compensate_ico .superiority-icon{background-position:0 0}
+.compensate_ico:hover .superiority-icon{background-position:0 -50px}
+.retreat_ico .superiority-icon{background-position:0 -100px}
+.retreat_ico:hover .superiority-icon{background-position:0 -150px}
+.technology_ico .superiority-icon{background-position:0 -200px}
+.technology_ico:hover .superiority-icon{background-position:0 -250px}
+.prepare_ico .superiority-icon{background-position:0 -300px}
+.prepare_ico:hover .superiority-icon{background-position:0 -350px}
+.service_ico .superiority-icon{background-position:0 -400px}
+.service_ico:hover .superiority-icon{background-position:0 -450px}
+.marquee-box{overflow:hidden;width:100%;position:absolute;left:0;top:0}
+.marquee{width:8000%;height:60px}
+.wave-list-box{float:left}
+.wave-list-box ul{float:left;height:60px;overflow:hidden;zoom:1}
+.wave-list-box ul li{height:60px;width:100%;float:left;line-height:30px;list-style:none}
+.wave-box{position:relative;height:60px;background:##fff}
+
+/* *{margin:0;padding:0;box-sizing:border-box;list-style:none}
+body{font-family:"Microsoft Yahei";min-width:1000px}
+a{outline:0;text-decoration:none}
+strong{font-weight:400}
+.strong{font-weight:700}
+::selection{background:#fdfbfe;color:#fdfbfe}
+img{border:0}
+::-moz-selection{background:#fdfbfe;color:#fdfbfe}
+::-webkit-selection{background:#fdfbfe;color:#fdfbfe}
+.autoWidth{margin:0 auto;min-width:1000px;max-width:1200px}
+.auto{margin:0 auto;min-width:1000px;max-width:1200px}
+@media screen and (max-width:1233px){.auto{padding-left:10px}
+}
+.clearfix:after,.clearfix:before{display:table;line-height:0;content:""}
+.clearfix:after{clear:both}
+.clear-float{clear:both}
+
+
+
+.footer{background-color:#e3007e;height:180px;font-family:"Microsoft Yahei"}
+.footer-floor1{width:100%;padding:36px 0 60px}
+.footer-list{width:69%;height:100%;float:left}
+.footer-list ul{float:left;margin-right:13%}
+.footer-list .flist-4{margin-right:0}
+.footer-list li{line-height:32px}
+.footer-list li a{color:#fdfbfe;font-size:12px;text-decoration:none}
+.footer-list li a:hover{text-decoration:underline;color:#fdfbfe}
+.footer-list .flist-title{font-size:16px;color:#fdfbfe;margin-bottom:15px}
+.footer-floor2{width:100%;border-top:1px solid #fdfbfe;padding:20px 0;text-align:center}
+.footer-floor2 p{text-align:center;color:#fdfbfe;font-size:12px;line-height:30px}
+.footer-floor2 p span{font-family:PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif}
+.footer-floor2 a{color:#fdfbfe}
+.footer-floor2 a:hover{color:#fdfbfe;text-decoration:underline}
+.foot-link{margin:0 15px;text-decoration:none;color:#fdfbfe}
+.foot-link:hover{text-decoration:underline}
+.footer-right{width:300px;float:right}
+.telephone{width:100%;height:32px;line-height:32px;color:#fdfbfe}
+.telephone span{display:inline-block;width:32px;height:32px;float:left;background:url(../images/phone_32px.png);margin-left:16%}
+.telephone .tel-number{font-size:30px;font-weight:400;text-align:right}
+.official-plat{width:100%;height:100%;margin-top:20px;position:relative}
+.official-plat ul{float:right;margin-top:7px}
+.official-plat ul li span{display:inline-block;width:32px;height:32px;background:url(../images/plat_icon.png) no-repeat 0 0;line-height:32px;float:left;margin-right:12px}
+.official-plat ul li .weibo-logo{background:url(../images/plat_icon.png) no-repeat -32px 0}
+.official-plat ul li .qq-logo{background:url(../images/plat_icon.png) no-repeat -64px 0}
+.official-plat ul li{height:45px}
+.official-plat ul a{display:inline-block;height:32px;width:100%;line-height:32px;color:#fff;text-decoration:none;font-size:12px}
+.official-plat>p{display:inline-block;width:132px;height:132px;border:1px solid #ddd;background-color:#fdfbfe}
+.official-plat .weixin{position:absolute;top:0;left:10px;background-image:url(../images/plat_qrcode.png);background-repeat:no-repeat;background-position:0 0}
+.official-plat .weibo{position:absolute;top:0;left:10px;background-image:url(../images/plat_qrcode.png);background-repeat:no-repeat;background-position:-132px 0;display:none}
+#wx-corner{border:10px solid transparent;border-left:10px solid #fdfbfe;position:absolute;top:12px;right:-20px;z-index:10}
+#wb-corner{border:10px solid transparent;border-left:10px solid #fdfbfe;position:absolute;top:58px;right:-20px;z-index:10}
+.five-superiority{width:100%;border-bottom:1px solid #fdfbfe;padding:10px 0 20px}
+.five-superiority-list li{float:left;width:20%;height:36px;text-align:center;border-left:1px solid #fdfbfe}
+.five-superiority-list li:first-child{border-left:none}
+.five-superiority-list li a{display:inline-block;position:relative;width:100%;height:36px;line-height:36px;background:no-repeat 2% center;text-indent:2em;color:#fdfbfe;font-size:16px}
+.five-superiority-list li a:hover{color:#fdfbfe}
+.five-superiority-list li a.superiority-text{text-indent:4em}
+.superiority-icon{position:absolute;width:40px;height:40px;left:10%;background-repeat:no-repeat;background-image:url(../images/footer_youshi.png)}
+.compensate_ico .superiority-icon{background-position:0 0}
+.compensate_ico:hover .superiority-icon{background-position:0 -50px}
+.retreat_ico .superiority-icon{background-position:0 -100px}
+.retreat_ico:hover .superiority-icon{background-position:0 -150px}
+.technology_ico .superiority-icon{background-position:0 -200px}
+.technology_ico:hover .superiority-icon{background-position:0 -250px}
+.prepare_ico .superiority-icon{background-position:0 -300px}
+.prepare_ico:hover .superiority-icon{background-position:0 -350px}
+.service_ico .superiority-icon{background-position:0 -400px}
+.service_ico:hover .superiority-icon{background-position:0 -450px}
+.marquee-box{overflow:hidden;width:100%;position:absolute;left:0;top:0}
+.marquee{width:8000%;height:60px}
+.wave-list-box{float:left}
+.wave-list-box ul{float:left;height:60px;overflow:hidden;zoom:1}
+.wave-list-box ul li{height:60px;width:100%;float:left;line-height:30px;list-style:none}
+.wave-box{position:relative;height:60px;background:##fdfbfe} */
+
+/* =========
+   Get Fonts */
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+/* ================
+   Assign Variables */
+/* ===========================
+   Setup Mixins/Helper Classes */
+.clearfix:after, .container:after, .tab-nav:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* ==========
+   Setup Page */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 3em;
+  background-image: url(../img/retina_wood.png);
+/*   color: grey; */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* =================
+   Container Styling */
+.container {
+  position: relative;
+  background: white;
+
+  padding: 3em;
+  border-radius: 10px;
+}
+
+/* ===========
+   Tab Styling */
+.tab-group {
+  position: relative;
+  border: 1px solid #e3007e;
+  margin-top: 2.5em;
+  border-radius: 0 0 10px 10px;
+}
+.tab-group section {
+  opacity: 0;
+  height: 0;
+  padding: 0 1em;
+  overflow: hidden;
+  transition: opacity 0.4s ease, height 0.4s ease;
+}
+.tab-group section.active {
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+}
+
+.tab-nav {
+  list-style: none;
+  margin: -2.5em -1px 0 0;
+  padding: 0;
+  height: 2.5em;
+  overflow: hidden;
+}
+.tab-nav li {
+  display: inline;
+}
+.tab-nav li a {
+  top: 1px;
+  position: relative;
+  display: block;
+  float: left;
+  border-radius: 10px 10px 0 0;
+  background: #e3007e;
+  line-height: 2em;
+  padding: 0 1em;
+  text-decoration: none;
+  color: grey;
+  margin-top: .5em;
+  margin-right: 1px;
+  transition: background .2s ease, line-height .2s ease, margin .2s ease;
+}
+.tab-nav li.active a {
+  background: #e3007e;
+  color: white;
+  line-height: 2.5em;
+  margin-top: 0;
+}
+
+
+
+
+
+
+@charset "utf-8";
+
+/* body{
+	background: #494A5F;
+    font-family: Arial, "Microsoft YaHei UI Light";
+}
+ */
+/*一、24格处理*/
+#iconWall{
+	  margin-left:200px;
+	float:float;
+    width: 732px;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    padding-top: 1px;
+    padding-left: 1px;
+    list-style: none;
+}
+
+#iconWall li{
+    width: 121px;
+    height: 108px;
+    /*background-color: #fff;*/
+    float: left;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    position: relative;
+
+}
+
+/*二、3D反转区域处理 */
+.img-back, .img-front{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    width: 121px;
+    height: 108px;
+    text-align: center;
+    line-height: 108px;
+}
+
+li img{
+    vertical-align: middle;
+}
+
+
+.img-3d{
+    transform-style: preserve-3d;
+}
+
+.img-back{
+    transform: rotateY(180deg);
+}
+
+/*测试代码*/
+/*li:hover .img-3d{*/
+    /*transition: .3s linear;*/
+    /*transform: rotateY(180deg);*/
+/*}*/
+
+/*三、换一批*/
+#btnRefresh{
+    text-align: center;
+    transition: .3s linear;
+    background-color: #fff;
+}
+.iconRefresh{
+    width: 28px;
+    height: 28px;
+    background: url("../img/refresh.png");
+    margin: 32px auto 0;
+}
+#btnRefresh:hover{
+    color: #fff;
+    background-color: #dd2727;
+    transition: 0s;
+}
+#btnRefresh:hover .iconRefresh{
+    background: url("../img/refresh-white.png");
+}
+
+
+/*四、处理浮层*/
+.mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 121px;
+    height: 108px;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+}
+
+.mask img{
+    float: right;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+.mask p{
+    font-size: 12px;
+    color: #fff;
+    margin-top: 45px;
+    text-align: center;
+}
+.mask a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    background-color: red;
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 9px;
+}
+
+li:hover .mask{
+    opacity: 1;
+    transition: .3s linear;
+}
+
+/*页脚*/
+footer{
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+
+/* body{
+	margin:0;
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	background-color:#333;
+	color:#fff;
+	padding-top:30px;
+}
+ */
+ul{
+	margin:0;
+	padding:0 0 20px 30px;
+}
+
+.container{
+	max-width: 1200px;
+	overflow:hidden;
+	padding: 20px;
+}
+.container{
+	margin:auto;
+}
+.mySlideshow .animated{
+	position:absolute;
+}
+.first{
+	background:url("../images/first.jpg") center no-repeat;
+}
+.first a,
+.first img{
+	display:block;
+}
+.first a{
+	top:80px;
+	left:39%;
+	margin-left:-165px;
+}
+.first div{
+	font-family:'Open Sans Condensed', sans-serif;
+	font-size:50px;
+	bottom:80px;
+	left:39%;
+	width:320px;
+	text-align:center;
+	margin-left:-160px;
+}
+.second{
+	background:url("../images/second.jpg") center no-repeat;
+}
+.second img{
+	top: 160px;
+	right: 19%;
+}
+.third{
+	background:url("../images/third.jpg") center no-repeat;
+}
+.third img{
+	top:100px;
+	left: 23%;
+}
+.fourth{
+	background:url("../images/fourth.jpg") center no-repeat;
+}
+.fourth img{
+	top:320px;
+	right:8%;
+}
+.fifth{
+	background:url("../images/fifth.jpg") center no-repeat;
+}
+.fifth img{
+	top:120px;
+	left:21%;
+}

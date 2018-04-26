@@ -1,0 +1,632 @@
+html {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    font: 12px/1.5 tahoma,arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+    font-family: "Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+    background: #000;
+}
+
+body, html {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body, div, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, p, table, input {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+li {
+    list-style: none;
+    vertical-align: bottom;
+}
+
+em, i {
+    font-style: normal;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    transition: color .3s,opacity .3s,transform .3s;
+    -webkit-transition: color .3s,opacity .3s,transform .3s;
+}
+
+    a:hover {
+        outline: none;
+        text-decoration: underline;
+    }
+
+img {
+    border: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.p_top_middle {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -66px;
+    font-size: 50px;
+}
+
+.banner_box {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner_cot {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.banner_list {
+    position: relative;
+    height: 100%;
+}
+
+.page_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -9999px;
+}
+
+.bg_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+    .bg_box img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+.page_box .content {
+    width: 1000px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -500px;
+    z-index: 5;
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+}
+
+.page_box .main_box {
+    position: relative;
+    height: 100%;
+    left: -9999px;
+    top: 50%;
+}
+
+.banner_list .show {
+    left: 0;
+}
+
+    .banner_list .show .main_box {
+        left: 0;
+    }
+
+/*下方导航图标*/
+.product_btns {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    z-index: 6;
+    transition: bottom .3s;
+    -webkit-transition: bottom .3s;
+    z-index: 10;
+}
+
+    .product_btns.show {
+        bottom: 100px;
+    }
+
+    .product_btns .content {
+        width: 1000px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -500px;
+    }
+
+    .product_btns .btns_box {
+        margin: auto;
+    }
+
+        .product_btns .btns_box a {
+            display: inline-block;
+            position: relative;
+            background-size: auto;
+        }
+
+    .product_btns .icon_bg {
+        background: url(../image/icon_big_1.png);
+    }
+
+    .product_btns .icon_show {
+        background: url(../image/icon_big.png);
+    }
+/*big size*/
+.big_view .product_btns .content {
+    height: 82px;
+}
+
+.big_view .product_btns .btns_box {
+    width: 500px;
+    height: 84px;
+}
+
+    .big_view .product_btns .btns_box a {
+        width: 90px;
+        height: 72px;
+        margin: 0 15px;
+    }
+
+/*mid size*/
+.mid_view .product_btns .content {
+    height: 58px;
+}
+
+.mid_view .product_btns .btns_box {
+    height: 58px;
+    width: 388px;
+}
+
+    .mid_view .product_btns .btns_box a {
+        width: 70px;
+        height: 56px;
+        margin: 0 12px;
+        background-size: 70px 56px;
+    }
+/*small size*/
+.small_view .product_btns .content {
+    height: 42px;
+}
+
+.small_view .product_btns .btns_box {
+    height: 42px;
+    width: 292px;
+}
+
+    .small_view .product_btns .btns_box a {
+        width: 50px;
+        height: 40px;
+        margin: 0 10px;
+        background-size: 50px 40px;
+    }
+/*分页样式*/
+/*第一页 天空中的猫老师*/
+.sky_xia {
+    z-index: 10;
+}
+
+.sky_cot {
+    position: absolute;
+    bottom: 30%;
+    right: 36%;
+    width: 371px;
+    height: 341px;
+}
+
+    .sky_cot img {
+        width: 100%;
+        height: 100%;
+    }
+
+.show .sky_anim1 {
+    animation: sky_1 1s;
+    -moz-animation: sky_1 1s;
+    -webkit-animation: sky_1 1s;
+    -o-animation: sky_1 1s;
+}
+
+.show .sky_anim2 {
+    animation: sky_2 2s;
+    -moz-animation: sky_2 2s;
+    -webkit-animation: sky_2 2s;
+    -o-animation: sky_2 2s;
+}
+
+@keyframes sky_1 {
+    0% {
+        opacity: 0;
+        top: 60%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@-moz-keyframes sky_1 {
+    0% {
+        opacity: 0;
+        top: 60%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@-webkit-keyframes sky_1 {
+    0% {
+        opacity: 0;
+        top: 60%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@-o-keyframes sky_1 {
+    0% {
+        opacity: 0;
+        top: 60%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@keyframes sky_2 {
+    0% {
+        opacity: 0;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    50% {
+        opacity: 1;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    100% {
+        bottom: 30%;
+        right: 36%;
+    }
+}
+
+@-moz-keyframes sky_2 {
+    0% {
+        opacity: 0;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    50% {
+        opacity: 1;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    100% {
+        bottom: 30%;
+        right: 36%;
+    }
+}
+
+@-webkit-keyframes sky_2 {
+    0% {
+        opacity: 0;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    50% {
+        opacity: 1;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    100% {
+        bottom: 30%;
+        right: 36%;
+    }
+}
+
+@-o-keyframes sky_2 {
+    0% {
+        opacity: 0;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    50% {
+        opacity: 1;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    100% {
+        bottom: 30%;
+        right: 36%;
+    }
+}
+/*3页  雪中的猫老师*/
+.page_box .snow_cot {
+    position: absolute;
+    z-index: 12;
+    bottom: 8%;
+    left: 50%;
+}
+
+.snow_cot img {
+    width: 100%;
+    height: 100%;
+}
+
+.show .snow_anim { /* animation   加上show 函数则当前页面显示时出现动效*/
+    animation: snow_1 0.5s;
+    -moz-animation: snow_1 0.5s; /* Firefox */
+    -webkit-animation: snow_1 0.5s; /* Safari and Chrome */
+    -o-animation: snow_1 2s; /* Opera */
+}
+
+@keyframes snow_1 {
+    0% {
+        left: 1000px;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+@-moz-keyframes snow_1 {
+    0% {
+        left: 1000px;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+@-webkit-keyframes snow_1 {
+    0% {
+        left: 1000px;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+@-o-keyframes snow_1 {
+    0% {
+        left: 1000px;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+/*第二页 房间里的猫老师*/
+.page_box .content .room_cot {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    margin-left: -200px;
+    width: 668px;
+    height: 585px;
+}
+
+.room_anim img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.show .room_anim {
+    animation: room_1 1.5s ease-in-out;
+    -moz-animation: room_1 1.5s ease-in-out;
+    -webkit-animation: room_1 1.5s ease-in-out;
+    -o-animation: room_1 1.5s ease-in-out;
+}
+
+@keyframes room_1 {
+    0% {
+        transform: rotate(720deg) scale(0);
+        opacity: 0;
+    }
+
+    66% {
+        transform: rotate(0deg) scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@-moz-keyframes room_1 {
+    0% {
+        transform: rotate(720deg) scale(0);
+        opacity: 0;
+    }
+
+    66% {
+        transform: rotate(0deg) scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@-webkit-keyframes room_1 {
+    0% {
+        transform: rotate(720deg) scale(0);
+        opacity: 0;
+    }
+
+    66% {
+        transform: rotate(0deg) scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@-o-keyframes room_1 {
+    0% {
+        transform: rotate(720deg) scale(0);
+        opacity: 0;
+    }
+
+    66% {
+        transform: rotate(0deg) scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+/*第四页 房间中的猫老师*/
+.page_box .content .forest_cot {
+    position: absolute;
+    bottom: 15%;
+    /*right: 1.04%;*/
+    width: 500px;
+    height: 636px;
+    left: 50%;
+}
+
+.forest_cot img {
+    width: 100%;
+    height: 100%;
+}
+
+.show .forest_anim {
+    animation: forest_1 1s ease-in-out;
+    -moz-animation: forest_1 1s ease-in-out;
+    -webkit-animation: forest_1 1s ease-in-out;
+    -o-animation: forest_1 1s ease-in-out;
+    /*向下移动*/
+    /*bottom: 9.5%;*/
+}
+
+@keyframes forest_1 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        bottom: 60%;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+        bottom: 55%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
+}
+
+@-moz-keyframes forest_1 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        bottom: 60%;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+        bottom: 55%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
+}
+
+@-o-keyframes forest_1 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        bottom: 60%;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+        bottom: 55%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
+}
+
+@-webkit-keyframes forest_1 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        bottom: 60%;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+        bottom: 55%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
+}

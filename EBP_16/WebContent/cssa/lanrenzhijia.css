@@ -1,0 +1,59 @@
+/* CSS Document */
+/* body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;  text-align:center; margin:0 auto;}
+table{border-collapse:collapse;border-spacing:0;}
+
+.clearfloat{height:0;font-size:1px;clear:both;line-height:0;}
+
+#container{ width:995px;text-align:left; margin:0 auto;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#ef9b11; text-decoration:underline;} */
+
+/* .protal-column-t1 .column2 { text-align:center;WIDTH: 834px; margin:0px auto;}
+.protal-column-t1 #column2-1-1 {
+	FLOAT: left; WIDTH: 670px; MARGIN-RIGHT: 0px; HEIGHT: 414px
+}
+.protal-column-t1 #column2-1-2 {
+	FLOAT: left
+}
+.protal-column-t1 #column2-1-2-1 {
+	BORDER-RIGHT: #e4e4e4 1px solid; BORDER-TOP: #e4e4e4 1px solid; BORDER-LEFT: #e4e4e4 1px solid; WIDTH: 158px; BORDER-BOTTOM: #e4e4e4 1px solid
+}
+.protal-column-t1 #column2-1-2-1 IMG {
+	MARGIN-BOTTOM: 0px
+}
+.protal-column-t1 #column2-1-2-2 IMG {
+	MARGIN-TOP: 0px
+}
+.protal-column-t1 #articlecontent {
+	PADDING-LEFT: 10px; PADDING-BOTTOM: 15px; LINE-HEIGHT: 20px; PADDING-TOP: 11px
+}
+.protal-column-t1 #column2-2-1 {
+	CLEAR: both; OVERFLOW: hidden; WIDTH: 834px
+}
+.protal-column-t1 #column2-2-1 .column2-2-1-1 {
+	BACKGROUND: url(../BImages/indeximg/v1/topC002.jpg) repeat-x; MARGIN-BOTTOM: 5px; WIDTH: 830px; HEIGHT: 44px
+}
+.protal-column-t1 #column2-2-1 .column2-2-1-1 .fright {
+	PADDING-TOP: 25px
+}
+.protal-column-t1 #column2-2-2 UL {
+	PADDING-LEFT: 10px; WIDTH: 764px
+}
+.protal-column-t1 #column2-2-2 LI {
+	FLOAT: left; MARGIN-BOTTOM: 10px; WIDTH: 191px; LINE-HEIGHT: 150%; TEXT-ALIGN: left
+}
+.protal-column-t1 #column2-2-2 LI IMG {
+	MARGIN-BOTTOM: 5px
+}
+.protal-column-t1 #column2-2-2 DIV {
+	FLOAT: left
+} */
+/* .arrow_left {
+	WIDTH: 30px; PADDING-TOP: 260px
+}
+.arrow_right {
+	WIDTH: 30px; PADDING-TOP: 260px
+} */

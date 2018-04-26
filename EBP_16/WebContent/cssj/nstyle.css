@@ -1,0 +1,49 @@
+﻿@charset "utf-8";
+
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+fieldset,img{border:0;}
+img{vertical-align:middle;}
+ol,ul,li{list-style-type:none;}
+table{border-collapse:collapse;border-spacing:0;}
+button,input,select,textarea{font-size:13px;font-family:inherit;margin:0;outline:none;resize:none;border:none;}
+.clearfix:after {clear: both; content: "."; display: block; height: 0; overflow: hidden; visibility: hidden; }
+.clearfix { zoom:1; }
+html{verflow:-Scroll;overflow-x:hidden;zoom:1;overflow-y:scroll;overflow:-moz-scrollbars-vertical;}
+body{color:#1b1f2b;font-size:12px;line-height:24px;font-family:"微软雅黑","宋体", Arial, Helvetica, sans-serif; }
+a{color:#1b1f2b;text-decoration:none;outline:none;blr:expression(this.onFocus=this.blur());}
+a:hover{color:#e5000c;text-decoration:none;}:focus{outline:none;}
+
+/* CSS活动的公共样式 */
+.fl{float:left;}
+.fr{float:right;}
+.gr_center{text-align:center;}
+.grWidth{width:1200px; margin:0 auto;}
+.mb10{margin-bottom:10px;}
+.mb15{margin-bottom:15px;}
+.center{text-align:center;}
+.hidden{overflow:hidden;}
+.nor{font-weight:normal;}
+
+.homeTitle {
+    text-align: center;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+.homeTitle h2 {
+    font-size: 36px;
+    color: #FF0000;
+    font-weight: normal;
+}
+.strength{padding-top:60px;}
+.strengthMain{height:;overflow:hidden;}
+.strengthMain li{float:left;width:600px;height:330px;overflow:hidden;background:#222;position:relative;}
+.strengthMain li img{width:600px;height:330px;transition:all .5s;opacity:0.4;}
+.strengthMain li .font{width:600px;height:205px;top:0;left:0;position:absolute;color:#fff;text-align:center;font-size:16px;padding-top:125px;}
+.strengthMain li .font h3{font-size:36px;color:#fff;font-weight:normal;margin-bottom:20px;line-height:36px;}
+.strengthMain li:hover img{transform: scale(1.05, 1.05);}
+.strengthMain li .font::before,.strengthMain li .font::after{position:absolute;content:'';opacity:0;transition:all 0.5s;}
+.strengthMain li .font::before{top:25px;right:15px;bottom:25px;left:15px;border-top:1px solid #fff;border-bottom:1px solid #fff;transform:scale(0,1);-webkit-transform-origin:0 0;transform-origin:0 0}
+.strengthMain li .font::after{top:15px;right:25px;bottom:15px;left:25px;border-right:1px solid #fff;border-left:1px solid #fff;transform:scale(1,0);transform-origin:100% 0;}
+.strengthMain li:hover .font::before,.strengthMain li:hover .font::after{opacity:1;transform:scale(1);transition: all 0.5s;}
+

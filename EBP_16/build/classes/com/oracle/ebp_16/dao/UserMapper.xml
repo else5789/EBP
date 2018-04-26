@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3.dtd">
+    
+<mapper namespace="com.oracle.ebp_16.dao.UserMapper">
+
+	
+
+	<update id="topUpAccount" >
+		update user
+		set balance=balance+#{1}
+		where username=#{0}		
+	</update>
+	
+	<update id="subAccount">
+		update user
+		set balance=balance-#{1}
+		where
+		username=#{0}
+	</update>
+	
+	
+	
+	
+	
+	<insert id="saveUser" parameterType="user">
+		insert into user(username,password,name,gender,age,idCard,address,telno,regTime,balance,status) 
+		values(#{username},#{password},#{name},#{gender},#{age},#{idCard},#{address},#{telno},#{regTime},#{balance},#{balance})
+	</insert>	
+	<!-- 数字可以表示参数位置select * from user where username=#{0}  -->
+	<select id="getUserByUsername" parameterType="String" resultType="user">
+		select * from user where username=#{username} and status=1
+	</select>
+	
+	<!-- public User getUserById(String uid); -->
+	<select id="getUserById" resultType="user" parameterType="String">
+		select * from user where uid=#{uid} and status=1
+	</select>
+	
+	<!-- public int updateUser(User user); -->
+	<!-- //更新用户信息    -->
+	<update id="updateUser" parameterType="user">
+		update user
+		<trim prefix="set" suffixOverrides=",">
+			<if test="password != null">password=#{password},</if>
+			<if test="name != null">name=#{name},</if>
+			<if test="idCard != null">idCard=#{idCard},</if>
+			<if test="gender != null">gender=#{gender},</if>
+			<if test="age != null">age=#{age},</if>
+			<if test="address != null">address=#{address},</if>
+			<if test="telno != null">telno=#{telno},</if>
+		</trim>
+		where uid=#{uid}
+	</update>
+		
+</mapper>    
+
+
+
+
+
+
+
+<!-- <mapper namespace="com.oracle.ebp_16.dao.UserMapper">
+	<select id="getUserByUsername" resultType="user" parameterType="String">
+		select * from user where username=#{username}
+	</select>
+	
+</mapper> -->

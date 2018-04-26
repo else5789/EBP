@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3.dtd">
+    
+<mapper namespace="com.oracle.ebp_16.dao.OrderMapper">
+	<!--public List<Order> getOrders(String uid); -->
+	<select id="getOrders" resultType="order" parameterType="String">
+		select * from orders where uid=#{uid}
+	</select>
+	
+	<insert id="saveOrder" parameterType="order" >
+		insert into orders(oid,uid,commitTime,amount,address,phone,recvname)
+		values(#{oid},#{uid},#{commitTime},#{amount},#{address},#{phone},#{recvname})
+	</insert>
+	
+	<select id="listAllOrders" resultType="order" >
+		select *
+		from orders
+		where uid=#{0}
+	</select>
+	
+	<select id="queryMaxId" resultType="Integer" >
+		select max(oid)
+		from orders;
+	</select>
+	
+	
+<!-- ======================管理员方法============================================================ -->	
+	<!-- 自定义的查询订单，里面包含用户信息，票据信息！ -->
+	<resultMap type="orders" id="order_map">
+		<!--property指向 对象中字段名   column指向数据库列名 -->
+		<result property="order.oid" column="oid"/>
+		<result property="orderList.descs" column="descs"/>
+		<result property="order.commitTime" column="commitTime" />
+		<result property="orderList.price" column="price"/>
+		<result property="order.recvname" column="recvname"/>
+		<result property="user.username" column="username"/>
+		<result property="user.idCard" column="idCard"/>
+	</resultMap>
+	
+	<!-- public List<Orders> getAllOrders(int index,int pageSize);-->
+	<select id="getAllOrders" resultMap="order_map">
+		select * from user,orders,orderlist where user.uid = orders.uid 
+		and orderlist.oid = orders.oid limit #{0},#{1}
+	</select>
+	<select id="getAllOrdersCount" resultType="int">
+		select count(user.uid) from user,orders,orderlist where user.uid = orders.uid 
+		and orderlist.oid = orders.oid
+	</select>
+	
+	<!-- public List<Orders> getOrdersByTime(String begin,String end,int index,int pageSize); -->	
+	<!-- 根据时间分页查询订单 -->
+	<select id="getOrdersByTime" resultMap="order_map">
+		select * from orders o,user u,orderlist ol where u.uid = o.uid and 
+		ol.oid = o.oid and o.commitTime &gt;= #{0} and o.commitTime &lt;= #{1}
+		limit #{2},#{3}
+	</select>
+	<!-- public int getOrdersCountByTime(String begin,String end); -->
+	<select id="getOrdersCountByTime" resultType="int">
+		select count(u.uid) from orders o,user u,orderlist ol where u.uid = o.uid and 
+		ol.oid = o.oid and o.commitTime &gt;= #{0} and o.commitTime &lt;= #{1}
+	</select>
+	
+	
+	<!-- 根据关键字段分页查询订单  -->
+	<!-- public List<Orders> getOrdersByKeys(SelectOrdersBean sob,int index,int pageSize); -->
+	<select id="getOrdersByKeys" resultMap="order_map" parameterType="selectOrdersBean">
+		SELECT * FROM orders o,USER u,orderlist l
+		WHERE o.uid=u.uid AND l.oid=o.oid
+		<if test="sname !=null ">
+			and u.username like concat('%',#{sname},'%')
+		</if>
+		<if test="sidCard !=null">
+			and u.idCard like concat('%',#{sidCard},'%') 
+		</if>
+		<if test="soid !=null">
+			and o.oid like concat('%',#{soid},'%') 
+		</if>
+		limit #{index},#{pageSize}
+	</select>
+	<!-- 根据关键字段查询订单数量  -->
+	<!-- public int getOrdersCountByKeys(SelectOrdersBean sob); -->
+	<select id="getOrdersCountByKeys" resultType="int">
+		select count(o.uid) from orders o,USER u,orderlist l
+		WHERE o.uid=u.uid AND l.oid=o.oid
+		<if test="sname !=null ">
+			and u.username like concat('%',#{sname},'%')
+		</if>
+		<if test="sidCard !=null">
+			and u.idCard like concat('%',#{sidCard},'%') 
+		</if>
+		<if test="soid !=null">
+			and o.oid like concat('%',#{soid},'%') 
+		</if>
+	</select>
+	
+</mapper>
+
+<!--public List<Orders> getOrdersByKeys(String sname,String sidCard,int soid);  -->
+<!-- <select id="getOrdersByKeys" resultMap="order_map">
+		SELECT * FROM orders o,USER u,orderlist l
+		WHERE o.uid=u.uid AND l.oid=o.oid
+		<if test="#{0} !=null ">
+			and u.username like concat('%',#{0},'%')
+		</if>
+		<if test="#{1} !=null">
+			and u.idCard like concat('%',#{1},'%') 
+		</if>
+		<if test="#{2} !=null">
+			and o.oid like concat('%',#{2},'%') 
+		</if>
+	</select>	 -->

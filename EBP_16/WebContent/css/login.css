@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+body{
+    font-family:"����"; margin:0 auto; text-align:center; font-size:14px; 
+    background-color:#0185CD;
+}
+img{
+    border:0;
+}
+div,p,input,form,h1,h2,h3,h4,h5,dl,dt,dd,ul,li,span{
+    margin:0; padding:0;
+}
+a{
+    text-decoration:none; color:#666666; font-size:14px;
+}
+ul,li{
+    list-style:none;
+}
+
+#login{
+    margin:0 auto; text-align:center; width:749px; height:420px; 
+    background:url(../images/bg-login.jpg) no-repeat; margin-top:150px;
+}
+#login .wrap{
+    margin:0 auto; text-align:center; 
+    width:375px;height:145px; padding-top:60px;
+}
+#login .left{
+    float:left; width:117px; height:137px; 
+    background:url(../images/icon-lock.jpg) no-repeat;margin-left:0px;
+}
+#login .right{
+    float:left; margin-left:0px; width:335px; height:145px; padding-top:20px;
+}
+#login .right p{
+    color:#224E67; margin-top:10px;
+}
+#login .textfield{
+    background:none; border:none; width:160px; height:25px;
+    border:solid 1px #499EB3; line-height:25px;
+    padding-left:5px;
+}
+#login .button{
+    background:none; border:none; width:70px; height:30px; 
+    background:url(../images/bg-button.jpg) no-repeat;
+    color:#FFFFFF; font-size:12px;
+}

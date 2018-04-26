@@ -1,0 +1,62 @@
+/*重置默认样式t*/
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-size: 14px;
+    min-width: 320px;
+}
+ol,ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333333;
+}
+a:hover{
+    color: #333333;
+}
+textarea,input{
+    outline:none;
+    border:none;
+    -webkit-appearance: none;
+}
+
+/*公用*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+    clear:both;
+    height: 0;
+}
+.m_r10{
+    margin-right: 10px;
+}
+.ml10{
+    margin-left: 10px;
+
+}
+
+
+/*精灵图标*/
+[class^='icon_'],[class*=' icon_']{
+    background-image:url("../images/sprites.png");
+    background-size: 200px 200px;
+}
+

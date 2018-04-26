@@ -1,0 +1,92 @@
+/*---slide show skin---*/
+.edslider{
+	position:relative;
+	margin:auto;
+}
+.edslider ul{
+	list-style:none;
+	position:relative;
+	padding:0;
+	margin:0;
+}
+.edslider > ul{
+	background:#fff;
+	display:block;
+	overflow:hidden;
+}
+.edslider > ul li{
+	display:none;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:0;
+}
+.edslider a{
+	display:block;
+}
+.edslider a img{
+	border:0;
+}
+.edslider .current{
+	z-index:1 !important;
+}
+/*---controls---*/
+.edslider .controls{
+	top: 0;
+	height: 0;
+	position:absolute;
+	width: 100%;
+	z-index:2;
+}
+.edslider .controls .navigator{
+	background: rgba(0,0,0,.3);
+	background-image:url(../images/sprite-navigator.png);
+	cursor:pointer;
+	display:block;
+	width:50px;
+	height:50px;
+	position: absolute;
+	overflow: hidden;
+	top: 225px;
+	transition: background .2s;
+}
+.edslider .controls .next{
+	background-position:0 0;
+	right: 0;
+}
+.edslider .controls .prev{
+	background-position:0 -50px;
+	left: 0;
+}
+.edslider .controls .next:hover,
+.edslider .controls .prev:hover{
+	background-color: rgba(0,0,0,.6);
+}
+.edslider .controls .paginator{
+	position: relative;
+	text-align: center;
+	top: 470px;
+}
+.edslider .controls .paginator li{
+	background:rgba(0,0,0,.7);
+	border-radius: 8px;
+	box-sizing: border-box;
+	display:inline-block;
+	height:16px;
+	width:16px;
+	margin:0 3px;
+	cursor:pointer;
+	transition: background .2s;
+}
+.edslider .controls .paginator li.current,
+.edslider .controls .paginator li:hover,
+.edslider .progress{
+	background:rgba(255,255,255,.5);
+}
+.edslider .progress{
+	position: absolute;
+	top: 0;
+	height:3px;
+	z-index:2;
+}

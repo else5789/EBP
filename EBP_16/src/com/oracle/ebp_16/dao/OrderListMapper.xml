@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3.dtd">
+    
+<mapper namespace="com.oracle.ebp_16.dao.OrderListMapper">
+	<!-- public List<OrderList> getOrderList(String oid); -->
+	<select id="getOrderList" resultType="orderList" parameterType="String">
+		select * from orderlist where oid=#{0}
+	</select>
+	
+	
+	<insert id="saveOrderListItem" >
+	insert into orderList(lid,descs,price,quantity,amount,oid)
+	values(#{lid},#{descs},#{price},#{quantity},#{amount},#{oid})
+	</insert>
+	
+	<select id="listAllOrderlistItems" resultType="orderList">
+		select * 
+		from orderlist
+		where oid=#{0}
+	</select>
+	
+	<select id="queryMaxId" resultType="Integer" >
+		select max(lid)
+		from orderList;
+	</select>
+	
+	<resultMap type="orders" id="order_map2">
+		<!--property指向 对象中字段名   column指向数据库列名 -->
+		<result property="orderList.lid" column="lid"/>
+		<result property="orderList.descs" column="descs"/>
+		<result property="order.commitTime" column="commitTime" />
+		<result property="orderList.price" column="price"/>
+		<result property="order.recvname" column="recvname"/>
+		<result property="user.username" column="username"/>
+		<result property="user.idCard" column="idCard"/>
+	</resultMap>
+	
+	<!-- public List<OrderList> userGetOrdersList(String oid); -->
+	<select id="userGetOrdersList" resultMap="order_map2">
+		select * from user,orders,orderlist where user.uid = orders.uid 
+		and orderlist.oid = orders.oid and orders.oid = #{oid}
+	</select>
+</mapper>

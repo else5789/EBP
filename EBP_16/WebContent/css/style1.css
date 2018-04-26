@@ -1,0 +1,12 @@
+*{padding:0;margin:0;list-style: none;}
+
+.box{width:100%; overflow:hidden;}
+.box-3 dl{ display:table; position:absolute; bottom:5px; right:5px; width:300px; background:#fff;box-shadow: 0 0 7px rgba(0,0,0,.3); border-radius:3px; }
+.box-3 dl dd{height: 40px;line-height: 40px; color:#fff; font-size: 16px;position: relative;padding-left: 10px; background:#06b5ff; border-radius:3px 3px 0 0;}
+.box-3 dl dd b{ display: block; height:40px; width:40px; position:absolute; top:0; right:0; cursor:pointer;}
+.box-3 dl dd b.up{ background:url(../images/up.png) center center no-repeat;}
+.box-3 dl dd b.down{ background:url(../images/down.png) center center no-repeat;}
+.box-3 dl ul{padding:0 20px; height:165px;}
+.box-3 dl ul li{ height:40px; line-height:40px; border-top: 1px dashed #EDEDED;}
+.box-3 dl ul li span{ display:inline-block; width:70px; text-align:right;}
+.box-3 dl ul li i{ font-style:normal; margin-left:10px;}
